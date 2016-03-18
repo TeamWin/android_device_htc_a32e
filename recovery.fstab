@@ -5,7 +5,7 @@
 /data		ext4	/dev/block/bootdevice/by-name/userdata				flags=encryptable=/dev/block/bootdevice/by-name/extra
 /boot		emmc	/dev/block/bootdevice/by-name/boot
 /recovery 	emmc	/dev/block/bootdevice/by-name/recovery				flags=backup=1
-/misc 		emmc	/dev/block/bootdevice/by-name/misc			
+/misc 		emmc	/dev/block/bootdevice/by-name/misc
 /devlog 	ext4	/dev/block/bootdevice/by-name/devlog
 /carrier 	ext4	/dev/block/bootdevice/by-name/carrier
 /cota		ext4	/dev/block/bootdevice/by-name/cota
@@ -13,4 +13,4 @@
 
 # Removable storage
 /external_sd	vfat	/dev/block/mmcblk1p1			/dev/block/mmcblk1	flags=display="Micro SDcard";storage;wipeingui;removable;encryptable=footer
-/usb_otg	vfat	/dev/block/sda1				/dev/block/sda		flags=display="USB-OTG";storage;wipeingui;removable
+#/usb_otg	vfat	/dev/block/sda1				/dev/block/sda		flags=display="USB-OTG";storage;wipeingui;removable
