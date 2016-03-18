@@ -12,6 +12,9 @@ on offmode_charging
     start detect_key
     start offmode_charging
 
+on boot
+    start chargeled
+
 on property:sys.usb.config=none
     stop adbd
     write /sys/class/android_usb/android0/enable 0
@@ -53,6 +56,10 @@ on property:sys.usb.config=mtp,adb
     start adbd
     write /sys/devices/platform/android_usb/usb_function_switch 131
     setprop sys.usb.state ${sys.usb.config}
+
+service chargeled /sbin/chargeled2
+    disabled
+    seclabel u:r:healthd:s0
 
 service choice_fn /sbin/choice_fn
     seclabel u:r:choice_fn:s0
