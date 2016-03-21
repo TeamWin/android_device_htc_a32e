@@ -17,14 +17,14 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := chargeled2.c
+LOCAL_SRC_FILES := chargeled.c
 
 LOCAL_CFLAGS += -Wall
 
 LOCAL_STATIC_LIBRARIES := libc liblog libcutils
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 
-LOCAL_MODULE := chargeled2
+LOCAL_MODULE := chargeled
 LOCAL_MODULE_TAGS := optional eng
 LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
