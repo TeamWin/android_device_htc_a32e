@@ -57,7 +57,7 @@ on property:sys.usb.config=mtp,adb
     write /sys/devices/platform/android_usb/usb_function_switch 131
     setprop sys.usb.state ${sys.usb.config}
 
-service chargeled /sbin/chargeled2
+service chargeled /sbin/chargeled
     disabled
     seclabel u:r:healthd:s0
 
