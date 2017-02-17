@@ -26,13 +26,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Time Zone data for Recovery
+PRODUCT_COPY_FILES += \
+    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+
 PRODUCT_NAME := omni_a32e
 PRODUCT_DEVICE := a32e
 PRODUCT_BRAND := HTC
 PRODUCT_MODEL := Desire 626s
 PRODUCT_MANUFACTURER := HTC
 
-# Kernel inline build
-#TARGET_KERNEL_CONFIG := a32e_defconfig
-#TARGET_VARIANT_CONFIG := a32e_defconfig
-#TARGET_SELINUX_CONFIG := a32e_defconfig
